@@ -6,9 +6,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "postinstall": "npm run build",
     "build": "babel server --copy-files --out-dir dist",
     "dev": "babel-watch server/app.js",
-    "start": "cross-env NODE_ENV=production && npm run build && node dist/app.js",
+    "start": "cross-env NODE_ENV=production && node dist/app.js",
     "heroku-postbuild": "npm run migrate:reset",
     "seed": "npx sequelize db:seed:all",
     "migrate": "npx sequelize-cli db:migrate",
