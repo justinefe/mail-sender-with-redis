@@ -5,13 +5,14 @@ import authHelper from '../helpers/auth';
 import notifications from '../helpers/notifications';
 import { comparePassword } from '../helpers/hashPassword';
 dotenv.config();
-const { REGISTRATION_URL, UNSUBSCRIBELINK } = process.env;
+const { UNSUBSCRIBELINK } = process.env;
 
 /**
  * @class AuthController
  */
 const task = nodeCron.schedule(
   '0 0 8-14 * 2',
+  // '* * * * *',
   async () => {
     const allSubscribers = await authService.findAllSubscribe();
     allSubscribers.map(async email => {

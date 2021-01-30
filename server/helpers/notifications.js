@@ -1,5 +1,5 @@
 import emailService from '../config/emailSetup';
-import sendMailQueue from '../config/bullConfig';
+// import sendMailQueue from '../config/bullConfig';
 import template from './template';
 
 /**

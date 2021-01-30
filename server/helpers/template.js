@@ -54,7 +54,7 @@ const template = (title, body, email) => `
               <td style="width: 100%; ">
                 <div style="background: #EFEEEE; padding: 20px 0px">
                   <p style="line-height: 20px; font-size: 0.75rem; padding: 0px 8px; color: black;">You’re getting this message because you subscribed to this newsletter with this <a href="#">${email}</a><br />
-                     click <a href='${BASE_URL}/unsubscribe/${email}'>unsubscribe</a> to stop receiving mails
+                     click <a target = '_' href="${BASE_URL}/unsubscribe?email=${email}">unsubscribe</a> to stop receiving mails
                   </p>
                 </div>
               </td>
