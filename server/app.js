@@ -13,7 +13,6 @@ import routes from './routes/index';
 // variables
 dotenv.config();
 const baseUrl = '/v1';
-const port = 3000;
 
 // initialize express server
 const app = express();
@@ -46,7 +45,9 @@ app.all('*', (req, res) => {
 
 // eslint-disable-next-line no-console
 if (process.env.NODE_ENV !== 'test') {
-  app.listen(port, () => console.log(`Listening on port ${port}...`));
+  app.listen(process.env.PORT || 3000, () =>
+    console.log(`Listening on port ${process.env.PORT}...`)
+  );
 }
 
 export default app;
