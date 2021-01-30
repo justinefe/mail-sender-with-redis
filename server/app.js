@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(`${baseUrl}`, routes);
 
 app.get('/', (req, res) => {
-  res.send('Welcome to bull');
+  res.send('Welcome to email sender service that sends newsletter every second Tuesday of the month to subscribers using queue redis services');
 });
 
 // displays endpoints when the server starts
