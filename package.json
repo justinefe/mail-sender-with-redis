@@ -6,7 +6,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "babel server --copy-files --out-dir dist",
+       "build": "babel server --copy-files --out-dir dist",
     "dev": "babel-watch server/app.js",
     "start": "cross-env NODE_ENV=production && node dist/app.js",
     "heroku-postbuild": "npm run migrate:reset && npm run build ",
