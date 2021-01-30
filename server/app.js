@@ -13,7 +13,6 @@ import routes from './routes/index';
 // variables
 dotenv.config();
 const baseUrl = '/v1';
-const port = 3000;
 
 // initialize express server
 const app = express();
@@ -44,9 +43,9 @@ app.all('*', (req, res) => {
   });
 });
 
-// eslint-disable-next-line no-console
-if (process.env.NODE_ENV !== 'test') {
-  app.listen(port, () => console.log(`Listening on port ${port}...`));
-}
+const port = process.env.PORT || 3020;
 
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 export default app;
