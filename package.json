@@ -8,8 +8,8 @@
   "scripts": {
     "build": "babel server --copy-files --out-dir dist",
     "dev": "babel-watch server/app.js",
-    "start": "cross-env NODE_ENV=production && npm run build && node dist/app.js",
-    "heroku-postbuild": "npm run migrate:reset && npm run seed",
+    "start": "cross-env NODE_ENV=production && node dist/app.js",
+    "heroku-postbuild": "npm run migrate:reset && npm run build ",
     "seed": "npx sequelize db:seed:all",
     "migrate": "npx sequelize-cli db:migrate",
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
