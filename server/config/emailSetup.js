@@ -41,7 +41,7 @@ const mailSender = async mailData => {
         service: 'gmail',
         auth: {
           user: `${USER_MAIL}`,
-          pass: `${USER_PASSWORD}`, //naturally, replace both with your real credentials or an application-specific password
+          pass: `${USER_PASSWORD}`, //naturally, replace  both with your real credentials or an application-specific password
         },
       });
 

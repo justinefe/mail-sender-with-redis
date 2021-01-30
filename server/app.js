@@ -44,8 +44,9 @@ app.all('*', (req, res) => {
 });
 
 
-const port = process.env.PORT || 3020;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Our app is running on port ${PORT}`);
+
 });
 export default app;
