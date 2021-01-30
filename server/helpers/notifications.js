@@ -1,5 +1,5 @@
 import emailService from '../config/emailSetup';
-// import sendMailQueue from '../config/bullConfig';
+import sendMailQueue from '../config/bullConfig';
 import template from './template';
 
 /**
@@ -7,7 +7,7 @@ import template from './template';
  * @param {*} emailTo
  * @param {*} link
  * @param {*} name
- * @returns {*} sends an email to a new user
+ * @returns {*} sends an email to a new users
  */
 const registrationEmail = (emailTo, link, name) => {
   const subject = 'Welcome to Bull';
